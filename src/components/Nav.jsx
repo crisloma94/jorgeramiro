@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import "./../resources/styles/Nav.scss";
 
 class Nav extends Component {
   state = {};
