@@ -13,7 +13,7 @@ class Home extends Component {
         <ul>
           {projects.map(project => (
             <Link key={project.id} to={`/projects/${project.id}`}>
-              <li>{project.name}</li>
+              <li>{project.data.name}</li>
             </Link>
           ))}
         </ul>
