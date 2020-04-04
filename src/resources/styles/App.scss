@@ -1,3 +1,5 @@
+@import "vars";
+
 @mixin font-face($font-family, $url) {
   @font-face {
     font-family: "#{$font-family}";
@@ -17,4 +19,52 @@
 
 body {
   font-family: "Druk Wide Bold", sans-serif;
+  font-size: $base-fontsize;
+  margin: 0;
+  background-color: $primary-color;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul li.dropdown ul {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+ul li.dropdown:hover > ul,
+ul li.dropdown:focus-within > ul,
+ul li.dropdown ul:hover {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (min-width: $breakpoint-mobile) {
+}
+
+@media screen and (min-width: $breakpoint-tablet) {
+}
+
+@media (min-width: $breakpoint-desktop) {
+  ul li.dropdown.dropdown-mobile ul,
+  ul li.dropdown.dropdown-tablet ul {
+    visibility: visible;
+    opacity: 1;
+  }
+  ul li.dropdown.dropdown-mobile > a,
+  ul li.dropdown.dropdown-tablet > a {
+    display: none;
+  }
 }

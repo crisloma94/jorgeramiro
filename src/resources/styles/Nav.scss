@@ -1,0 +1,59 @@
+@import "vars";
+
+.navbar {
+  position: relative;
+  .navlink {
+    color: white;
+    font-size: 0.9rem;
+    margin: 0 20px;
+  }
+  .navbar-navigation {
+    position: fixed;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    justify-content: space-between;
+    max-width: 1800px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .navbar-socialmedia {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    .navicon {
+      margin: 15px 0;
+    }
+    .socialmedia-dropdown {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+    .socialmedia-links {
+      position: fixed;
+      bottom: 70px;
+      right: 25px;
+    }
+  }
+}
+
+@media only screen and (min-width: $breakpoint-mobile) {
+}
+
+@media only screen and (min-width: $breakpoint-tablet) {
+}
+
+@media only screen and (min-width: $breakpoint-desktop) {
+  .navbar {
+    .navlink {
+      margin: 0 40px;
+    }
+    .navbar-socialmedia {
+      .socialmedia-links {
+        top: 40%;
+        right: 40px;
+      }
+    }
+  }
+}
