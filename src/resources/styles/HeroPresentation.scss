@@ -1,0 +1,35 @@
+@import "vars";
+
+.hero-presentation {
+  position: relative;
+  background-color: $accent-color;
+  height: 100vh;
+  .hero-title {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    h1 {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .hero-subtitle {
+    position: absolute;
+    left: 50%;
+    top: calc(50% + 30px);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: $breakpoint-mobile) {
+}
+
+@media only screen and (min-width: $breakpoint-tablet) {
+}
+
+@media only screen and (min-width: $breakpoint-desktop) {
+}

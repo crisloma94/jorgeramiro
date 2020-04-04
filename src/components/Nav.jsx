@@ -7,7 +7,6 @@ import instagramIcon from "./../resources/images/icons/instagram.svg";
 import socialMediaIcon from "./../resources/images/icons/rrss.svg";
 
 class Nav extends Component {
-  state = {};
   render() {
     return (
       <nav class="navbar" role="navigation">

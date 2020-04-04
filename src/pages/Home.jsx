@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import data from "./../resources/projects.json";
+import HeroPresentation from "./../components/HeroPresentation";
 
 class Home extends Component {
   state = {};
@@ -9,7 +10,7 @@ class Home extends Component {
     const projects = data.Projects;
     return (
       <React.Fragment>
-        <h1>Homepage</h1>
+        <HeroPresentation></HeroPresentation>
         <ul>
           {projects.map(project => (
             <Link key={project.id} to={`/projects/${project.id}`}>
