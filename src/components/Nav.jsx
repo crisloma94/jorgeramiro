@@ -9,31 +9,31 @@ import socialMediaIcon from "./../resources/images/icons/rrss.svg";
 class Nav extends Component {
   render() {
     return (
-      <nav class="navbar" role="navigation">
-        <ul class="navbar-navigation">
+      <nav className="navbar" role="navigation">
+        <ul className="navbar-navigation">
           <li>
-            <Link class="navlink" to="/">
+            <Link className="navlink" to="/">
               Home
             </Link>
           </li>
           <li>
-            <Link class="navlink" to="/">
+            <Link className="navlink" to="/">
               Contact
             </Link>
           </li>
           <li>
-            <Link class="navlink" to="/about">
+            <Link className="navlink" to="/about">
               About
             </Link>
           </li>
         </ul>
-        <ul class="navbar-socialmedia">
-          <li class="dropdown dropdown-top dropdown-mobile dropdown-tablet">
-            <a class="socialmedia-dropdown" href="#">
+        <ul className="navbar-socialmedia">
+          <li className="dropdown dropdown-top dropdown-mobile dropdown-tablet">
+            <a className="socialmedia-dropdown" href="#">
               <img src={socialMediaIcon} alt="social media icon" />
             </a>
-            <ul class="socialmedia-links">
-              <li class="navicon">
+            <ul className="socialmedia-links">
+              <li className="navicon">
                 <a
                   href="https://es.linkedin.com/in/jorgeramiro"
                   target="_blank"
@@ -42,7 +42,7 @@ class Nav extends Component {
                   <img src={linkedinIcon} alt="linkedin icon" />
                 </a>
               </li>
-              <li class="navicon">
+              <li className="navicon">
                 <a
                   href="https://www.behance.net/JorgeRamiro"
                   target="_blank"
@@ -51,7 +51,7 @@ class Nav extends Component {
                   <img src={behanceIcon} alt="behance icon" />
                 </a>
               </li>
-              <li class="navicon">
+              <li className="navicon">
                 <a
                   href="https://www.instagram.com/ramiro.jorge/"
                   target="_blank"

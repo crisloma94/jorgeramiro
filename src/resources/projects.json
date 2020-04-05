@@ -4,7 +4,7 @@
       "id": "prisma",
       "data": {
         "name": "Prisma",
-        "mainImage": "",
+        "mainImage": "/images/prisma/prisma-main.jpg",
         "colection": "",
         "sport": "",
         "brand": "",
@@ -61,7 +61,7 @@
       "id": "hook",
       "data": {
         "name": "Hook",
-        "mainImage": "",
+        "mainImage": "/images/hook/hook-main.png",
         "colection": "",
         "sport": "",
         "brand": "",
@@ -118,7 +118,7 @@
       "id": "modular",
       "data": {
         "name": "Modular",
-        "mainImage": "",
+        "mainImage": "/images/modular/modular-main.jpg",
         "colection": "",
         "sport": "",
         "brand": "",
