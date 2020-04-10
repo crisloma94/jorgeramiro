@@ -1,6 +1,6 @@
 @import "vars";
 
-.project-selector {
+#project-selector {
   background-color: black;
   padding-top: 90%;
   padding-bottom: 40%;
@@ -18,7 +18,7 @@
         color: transparent;
         margin: 20px;
       }
-      &.selected {
+      &.active {
         img {
           display: block;
           width: 90%;
