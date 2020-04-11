@@ -11,7 +11,9 @@ class Home extends Component {
     return (
       <React.Fragment>
         <HeroPresentation></HeroPresentation>
-        <ProjectSelector projects={projects}></ProjectSelector>
+        <div className="container">
+          <ProjectSelector projects={projects}></ProjectSelector>
+        </div>
       </React.Fragment>
     );
   }

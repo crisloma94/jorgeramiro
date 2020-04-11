@@ -22,6 +22,10 @@ body {
   font-size: $base-fontsize;
   margin: 0;
   background-color: $primary-color;
+  .container {
+    max-width: 1800px;
+    margin: 0 auto;
+  }
 }
 
 a {

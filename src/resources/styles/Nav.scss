@@ -40,9 +40,6 @@
   }
 }
 
-@media only screen and (min-width: $breakpoint-mobile) {
-}
-
 @media only screen and (min-width: $breakpoint-tablet) {
 }
 
@@ -50,6 +47,9 @@
   .navbar {
     .navlink {
       margin: 0 40px;
+    }
+    .navbar-navigation {
+      margin-top: 30px;
     }
     .navbar-socialmedia {
       .socialmedia-links {
