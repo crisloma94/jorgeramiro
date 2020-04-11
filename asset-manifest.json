@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/jorgeramiro/static/css/main.f8f98df0.chunk.css",
-    "main.js": "/jorgeramiro/static/js/main.2957fac7.chunk.js",
-    "main.js.map": "/jorgeramiro/static/js/main.2957fac7.chunk.js.map",
-    "runtime-main.js": "/jorgeramiro/static/js/runtime-main.4fab4b21.js",
-    "runtime-main.js.map": "/jorgeramiro/static/js/runtime-main.4fab4b21.js.map",
-    "static/js/2.006b0d6b.chunk.js": "/jorgeramiro/static/js/2.006b0d6b.chunk.js",
-    "static/js/2.006b0d6b.chunk.js.map": "/jorgeramiro/static/js/2.006b0d6b.chunk.js.map",
-    "index.html": "/jorgeramiro/index.html",
-    "precache-manifest.13a3c58a4ea5fff90d53a1a989291be9.js": "/jorgeramiro/precache-manifest.13a3c58a4ea5fff90d53a1a989291be9.js",
-    "service-worker.js": "/jorgeramiro/service-worker.js",
-    "static/css/main.f8f98df0.chunk.css.map": "/jorgeramiro/static/css/main.f8f98df0.chunk.css.map",
-    "static/js/2.006b0d6b.chunk.js.LICENSE.txt": "/jorgeramiro/static/js/2.006b0d6b.chunk.js.LICENSE.txt",
-    "static/media/behance.svg": "/jorgeramiro/static/media/behance.96012082.svg",
-    "static/media/instagram.svg": "/jorgeramiro/static/media/instagram.716b1787.svg",
-    "static/media/linkedin.svg": "/jorgeramiro/static/media/linkedin.8ca5fdce.svg",
-    "static/media/rrss.svg": "/jorgeramiro/static/media/rrss.f6f21b50.svg"
+    "main.css": "./static/css/main.f8f98df0.chunk.css",
+    "main.js": "./static/js/main.f9276182.chunk.js",
+    "main.js.map": "./static/js/main.f9276182.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.5d9346bb.js",
+    "runtime-main.js.map": "./static/js/runtime-main.5d9346bb.js.map",
+    "static/js/2.006b0d6b.chunk.js": "./static/js/2.006b0d6b.chunk.js",
+    "static/js/2.006b0d6b.chunk.js.map": "./static/js/2.006b0d6b.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.38d6b05350ad8f2be6ca6888607cc05b.js": "./precache-manifest.38d6b05350ad8f2be6ca6888607cc05b.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.f8f98df0.chunk.css.map": "./static/css/main.f8f98df0.chunk.css.map",
+    "static/js/2.006b0d6b.chunk.js.LICENSE.txt": "./static/js/2.006b0d6b.chunk.js.LICENSE.txt",
+    "static/media/behance.svg": "./static/media/behance.96012082.svg",
+    "static/media/instagram.svg": "./static/media/instagram.716b1787.svg",
+    "static/media/linkedin.svg": "./static/media/linkedin.8ca5fdce.svg",
+    "static/media/rrss.svg": "./static/media/rrss.f6f21b50.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.4fab4b21.js",
+    "static/js/runtime-main.5d9346bb.js",
     "static/js/2.006b0d6b.chunk.js",
     "static/css/main.f8f98df0.chunk.css",
-    "static/js/main.2957fac7.chunk.js"
+    "static/js/main.f9276182.chunk.js"
   ]
 }
