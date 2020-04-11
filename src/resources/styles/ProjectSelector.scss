@@ -2,12 +2,15 @@
 
 #project-selector {
   background-color: black;
-  padding-top: 90%;
-  padding-bottom: 40%;
+  height: 110vh;
+  position: relative;
   .project-list {
+    position: absolute;
+    width: 100%;
+    top: 70%;
+    transform: translateY(-50%);
     .project-link {
       margin-bottom: 30px;
-      position: relative;
       img {
         display: none;
       }

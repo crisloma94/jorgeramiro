@@ -7,21 +7,27 @@ const ProjectSelector = props => {
   const projectSelector = useRef();
 
   const [active, setActive] = useState(0);
-
   const [position, setPosition] = useState(
     document.body.getBoundingClientRect().y
   );
 
   const handleScroll = useCallback(() => {
-    const newPosition = projectSelector.current.getBoundingClientRect().y;
-    if (position - newPosition > 40) {
-      setActive((active + 1) % projects.length);
-      setPosition(newPosition);
-    } else if (position - newPosition < -40) {
-      setActive((active - 1) % projects.length);
-      setPosition(newPosition);
+    const newPosition = document.body.getBoundingClientRect().y;
+    const elementRect = projectSelector.current.getBoundingClientRect();
+
+    if (elementRect.y < 0 && elementRect.y > -(elementRect.height / 2)) {
+      if (position - newPosition > 30) {
+        if (active + 1 >= 0 && active + 1 < projects.length) {
+          setActive(active + 1);
+        }
+        setPosition(newPosition);
+      } else if (position - newPosition < -30) {
+        if (active - 1 >= 0 && active - 1 < projects.length) {
+          setActive(active - 1);
+        }
+        setPosition(newPosition);
+      }
     }
-    console.log("difference: ", position - newPosition);
   }, [active, position, projects.length]);
 
   useEffect(() => {
@@ -35,7 +41,9 @@ const ProjectSelector = props => {
         {projects.map((project, index) => (
           <li
             key={project.id}
-            className={`project-link ${active === index ? "active" : ""}`}
+            className={`project-link ${active === index ? "active" : ""} ${
+              active === index + 2 || active === index - 2 ? "last" : ""
+            }`}
           >
             <Link to={`/projects/${project.id}`}>
               {`${(index + 1).toString().padStart(2, "0")}_${
