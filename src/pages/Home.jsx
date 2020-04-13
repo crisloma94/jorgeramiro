@@ -36,7 +36,13 @@ const Home = () => {
           <HeroPresentation></HeroPresentation>
         </div>
       )}
-      <div className={`container`}>
+      <div
+        className={`container ${
+          presentation === "ready" || presentation === "running"
+            ? "invisible"
+            : ""
+        }`}
+      >
         <ProjectSelector projects={projects}></ProjectSelector>
       </div>
     </React.Fragment>

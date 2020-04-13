@@ -22,10 +22,13 @@ body {
   font-size: $base-fontsize;
   margin: 0;
   background-color: $primary-color;
-  .container {
-    max-width: 1800px;
-    margin: 0 auto;
-  }
+}
+
+.container {
+  max-width: 1800px;
+  margin: 0 auto;
+  opacity: 1;
+  transition: opacity 750ms ease-in;
 }
 
 a {
@@ -60,6 +63,11 @@ ul li.dropdown ul:hover {
 
 .hidden {
   display: none;
+}
+
+.invisible {
+  visibility: hidden;
+  opacity: 0;
 }
 
 @media screen and (min-width: $breakpoint-mobile) {
