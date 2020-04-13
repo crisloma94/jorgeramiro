@@ -26,6 +26,12 @@
   }
 }
 
+.animate {
+  opacity: 1;
+  transition: opacity 1500ms ease-in;
+  animation-fill-mode: forwards;
+}
+
 @media only screen and (min-width: $breakpoint-mobile) {
 }
 

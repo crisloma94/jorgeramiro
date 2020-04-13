@@ -68,6 +68,7 @@ ul li.dropdown ul:hover {
 .invisible {
   visibility: hidden;
   opacity: 0;
+  transition: opacity 1000ms ease-in;
 }
 
 @media screen and (min-width: $breakpoint-mobile) {

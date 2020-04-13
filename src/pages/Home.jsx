@@ -22,9 +22,10 @@ const Home = () => {
         clearTimeout(presentationTimer);
       };
     }
-  }, [setPresentation, position]);
+  }, [presentation, position]);
 
   useEffect(() => {
+    //TODO: block it till the presentation animation is done
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
