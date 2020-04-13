@@ -58,6 +58,10 @@ ul li.dropdown ul:hover {
   opacity: 1;
 }
 
+.hidden {
+  display: none;
+}
+
 @media screen and (min-width: $breakpoint-mobile) {
 }
 

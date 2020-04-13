@@ -1,22 +1,50 @@
-import React, { Component } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import data from "./../resources/projects.json";
 import HeroPresentation from "./../components/HeroPresentation";
 import ProjectSelector from "./../components/ProjectSelector";
+import "./../resources/styles/Home.scss";
 
-class Home extends Component {
-  state = {};
+const Home = () => {
+  const projects = data.Projects;
+  const position = document.body.getBoundingClientRect().y;
+  // presentation: ready running hidden
+  const [presentation, setPresentation] = useState("ready");
 
-  render() {
-    const projects = data.Projects;
-    return (
-      <React.Fragment>
-        <HeroPresentation></HeroPresentation>
-        <div className="container">
-          <ProjectSelector projects={projects}></ProjectSelector>
+  const handleScroll = useCallback(() => {
+    const newPosition = document.body.getBoundingClientRect().y;
+    if (position - newPosition > 1) {
+      setPresentation("running");
+      const presentationTimer = setTimeout(
+        () => setPresentation("hidden"),
+        2000
+      );
+      return () => {
+        clearTimeout(presentationTimer);
+      };
+    }
+  }, [setPresentation, position]);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
+
+  return (
+    <React.Fragment>
+      {presentation !== "hidden" && (
+        <div className={`presentation ${presentation}`}>
+          <HeroPresentation></HeroPresentation>
         </div>
-      </React.Fragment>
-    );
-  }
-}
+      )}
+      <div
+        className={`container ${
+          presentation === "ready" || presentation === "running" ? "hidden" : ""
+        }`}
+      >
+        <ProjectSelector projects={projects}></ProjectSelector>
+      </div>
+    </React.Fragment>
+  );
+};
 
 export default Home;

@@ -1,0 +1,16 @@
+.presentation {
+  &.running {
+    animation-name: presentationAnimation;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes presentationAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
