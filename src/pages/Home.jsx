@@ -12,7 +12,7 @@ const Home = () => {
 
   const handleScroll = useCallback(() => {
     const newPosition = document.body.getBoundingClientRect().y;
-    if (position - newPosition > 1) {
+    if (position - newPosition > 1 && presentation === "ready") {
       setPresentation("running");
       const presentationTimer = setTimeout(
         () => setPresentation("hidden"),
