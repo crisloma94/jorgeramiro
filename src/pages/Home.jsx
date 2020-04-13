@@ -16,7 +16,7 @@ const Home = () => {
       setPresentation("running");
       const presentationTimer = setTimeout(
         () => setPresentation("hidden"),
-        2000
+        1000
       );
       return () => {
         clearTimeout(presentationTimer);
