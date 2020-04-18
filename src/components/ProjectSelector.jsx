@@ -1,42 +1,34 @@
-import React, { useState, useCallback, useEffect, useRef } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./../resources/styles/ProjectSelector.scss";
 
-const ProjectSelector = props => {
+const ProjectSelector = (props) => {
   const projects = props.projects;
-  const projectSelector = useRef();
 
   const [active, setActive] = useState(0);
-  const [position, setPosition] = useState(
-    document.body.getBoundingClientRect().y
-  );
 
-  const handleScroll = useCallback(() => {
-    const newPosition = document.body.getBoundingClientRect().y;
-    const elementRect = projectSelector.current.getBoundingClientRect();
-
-    if (elementRect.y < 0 && elementRect.y > -(elementRect.height / 2)) {
-      if (position - newPosition > 30) {
+  const handleScroll = useCallback(
+    (event) => {
+      if (event.deltaY > 2) {
         if (active + 1 >= 0 && active + 1 < projects.length) {
           setActive(active + 1);
         }
-        setPosition(newPosition);
-      } else if (position - newPosition < -30) {
+      } else if (event.deltaY < -2) {
         if (active - 1 >= 0 && active - 1 < projects.length) {
           setActive(active - 1);
         }
-        setPosition(newPosition);
       }
-    }
-  }, [active, position, projects.length]);
+    },
+    [active, projects.length]
+  );
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("wheel", handleScroll);
+    return () => window.removeEventListener("wheel", handleScroll);
   }, [handleScroll]);
 
   return (
-    <section id="project-selector" ref={projectSelector}>
+    <section id="project-selector">
       <ul className="project-list">
         {projects.map((project, index) => (
           <li
