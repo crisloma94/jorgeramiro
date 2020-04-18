@@ -17,6 +17,8 @@
   "https://db.onlinewebfonts.com/t/2206d6cc490084998d531e8c1b2cbb4a"
 );
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
 body {
   font-family: "Druk Wide Bold", sans-serif;
   font-size: $base-fontsize;
@@ -33,6 +35,11 @@ body {
 
 a {
   text-decoration: none;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
 }
 
 li {
@@ -66,7 +73,6 @@ ul li.dropdown ul:hover {
 }
 
 .invisible {
-  visibility: hidden;
   opacity: 0;
   transition: opacity 1000ms ease-in;
 }
