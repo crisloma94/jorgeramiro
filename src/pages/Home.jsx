@@ -6,28 +6,33 @@ import "./../resources/styles/Home.scss";
 
 const Home = () => {
   const projects = data.Projects;
-  const position = document.body.getBoundingClientRect().y;
   // presentation: ready running hidden
   const [presentation, setPresentation] = useState("ready");
 
-  const handleScroll = useCallback(() => {
-    const newPosition = document.body.getBoundingClientRect().y;
-    if (position - newPosition > 1 && presentation === "ready") {
-      setPresentation("running");
-      const presentationTimer = setTimeout(
-        () => setPresentation("hidden"),
-        1000
-      );
-      return () => {
-        clearTimeout(presentationTimer);
-      };
-    }
-  }, [presentation, position]);
+  const handleScroll = useCallback(
+    (event) => {
+      if (event.deltaY > 1 && presentation === "ready") {
+        setPresentation("running");
+        const presentationTimer = setTimeout(
+          () => setPresentation("hidden"),
+          1000
+        );
+        return () => {
+          clearTimeout(presentationTimer);
+        };
+      }
+    },
+    [presentation]
+  );
 
   useEffect(() => {
-    //TODO: block it till the presentation animation is done
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const timer = setTimeout(() => {
+      window.addEventListener("wheel", handleScroll);
+    }, 4000);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("wheel", handleScroll);
+    };
   }, [handleScroll]);
 
   return (
