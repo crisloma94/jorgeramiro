@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useEffect } from "react";
 import { Link } from "react-router-dom";
+import _ from "lodash";
 import "./../resources/styles/ProjectSelector.scss";
 
 const ProjectSelector = (props) => {
@@ -7,19 +8,23 @@ const ProjectSelector = (props) => {
 
   const [active, setActive] = useState(0);
 
+  const updateValue = _.debounce((event) => {
+    if (event.deltaY > 0) {
+      if (active + 1 >= 0 && active + 1 < projects.length) {
+        setActive(active + 1);
+      }
+    } else if (event.deltaY < 0) {
+      if (active - 1 >= 0 && active - 1 < projects.length) {
+        setActive(active - 1);
+      }
+    }
+  }, 40);
+
   const handleScroll = useCallback(
     (event) => {
-      if (event.deltaY > 2) {
-        if (active + 1 >= 0 && active + 1 < projects.length) {
-          setActive(active + 1);
-        }
-      } else if (event.deltaY < -2) {
-        if (active - 1 >= 0 && active - 1 < projects.length) {
-          setActive(active - 1);
-        }
-      }
+      updateValue(event);
     },
-    [active, projects.length]
+    [updateValue]
   );
 
   useEffect(() => {
