@@ -1,15 +1,28 @@
-import React, { Component } from "react";
+import React from "react";
 import data from "./../resources/projects.json";
+import ProjectPresentation from "./../components/ProjectPresentation";
+import ProjectInspo from "./../components/ProjectInspo";
+import ProjectIdeation from "./../components/ProjectIdeation";
+import Video from "./../components/Video";
+import ProjectFinished from "./../components/ProjectFinished";
+import NextProject from "./../components/NextProject";
 
-class Project extends Component {
-  state = {};
-  render() {
-    let project = data.Projects.filter(
-      project => project.id === this.props.match.params.id
-    );
-    project = project[0];
-    return <h1>Project {project.data.name}</h1>;
-  }
-}
+const Project = (props) => {
+  let project = data.Projects.filter(
+    (project) => project.id === props.match.params.id
+  );
+  project = project[0];
+
+  return (
+    <React.Fragment>
+      <ProjectPresentation project={project}></ProjectPresentation>
+      <ProjectInspo></ProjectInspo>
+      <ProjectIdeation></ProjectIdeation>
+      <Video></Video>
+      <ProjectFinished></ProjectFinished>
+      <NextProject></NextProject>
+    </React.Fragment>
+  );
+};
 
 export default Project;
