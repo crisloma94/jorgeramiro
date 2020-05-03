@@ -40,7 +40,7 @@ const ProjectSelector = (props) => {
             key={project.id}
             className={`project-link ${active === index ? "active" : ""} ${
               active === index + 2 || active === index - 2 ? "last" : ""
-            }`}
+            } ${active > index ? "up" : "down"}`}
           >
             <Link to={`/projects/${project.id}`}>
               {`${(index + 1).toString().padStart(2, "0")}_${

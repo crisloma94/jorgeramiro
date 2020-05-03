@@ -6,13 +6,9 @@
   max-width: 1300px;
   position: relative;
   margin: 0 auto;
+  padding-left: 40px;
   .project-list {
-    position: absolute;
-    width: 100%;
-    top: 70%;
-    transform: translateY(-50%);
     .project-link {
-      margin-bottom: 30px;
       img {
         transition: opacity 500ms ease-in;
         width: 90%;
@@ -21,19 +17,29 @@
         filter: grayscale(100%);
         -webkit-filter: grayscale(100%);
         opacity: 0;
-        top: -280px;
+        top: 20%;
         height: 220px;
         object-fit: cover;
       }
       a {
-        position: relative;
+        position: absolute;
         z-index: 1;
         font-size: 2rem;
         -webkit-text-stroke-width: 0.65px;
         -webkit-text-stroke-color: $accent-color;
         color: transparent;
-        margin: 20px;
         text-transform: uppercase;
+        transform: translateY(-50%);
+      }
+      &.up {
+        a {
+          top: 50%;
+        }
+      }
+      &.down {
+        a {
+          top: 70%;
+        }
       }
       &.active {
         img {
@@ -41,16 +47,27 @@
           transition: opacity 500ms ease-in;
         }
         a {
-          font-size: 2.2rem;
+          font-size: 2.1rem;
           -webkit-text-stroke-width: 0;
           -webkit-text-stroke-color: transparent;
           color: $secondary-color;
+          top: 60%;
         }
       }
       &.last {
         a {
           font-size: 1.8rem;
           -webkit-text-stroke-width: 0.25px;
+        }
+        &.up {
+          a {
+            top: 40%;
+          }
+        }
+        &.down {
+          a {
+            top: 80%;
+          }
         }
       }
     }
@@ -61,13 +78,21 @@
   #project-selector {
     .project-list {
       .project-link {
-        margin-bottom: 40px;
         img {
           height: 400px;
-          top: -450px;
         }
         a {
           font-size: 3rem;
+        }
+        &.up {
+          a {
+            top: 40%;
+          }
+        }
+        &.down {
+          a {
+            top: 60%;
+          }
         }
         &.active {
           a {
@@ -78,6 +103,16 @@
           a {
             font-size: 2.8rem;
           }
+          &.up {
+            a {
+              top: 30%;
+            }
+          }
+          &.down {
+            a {
+              top: 70%;
+            }
+          }
         }
       }
     }
@@ -87,14 +122,10 @@
 @media only screen and (min-width: $breakpoint-desktop) {
   #project-selector {
     .project-list {
-      padding-left: 40px;
-      top: 60%;
       .project-link {
-        margin-bottom: 50px;
         img {
           height: 650px;
           width: 900px;
-          top: -250px;
         }
         a {
           font-size: 3.2rem;
