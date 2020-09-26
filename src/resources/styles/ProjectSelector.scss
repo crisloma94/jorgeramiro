@@ -2,17 +2,23 @@
 
 #project-selector {
   background-color: black;
-  height: 100vh;
+  height: 90vh;
   max-width: 1300px;
   position: relative;
   margin: 0 auto;
   padding-left: 40px;
+  padding-top: 43vh;
   .project-list {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     .project-link {
+      height: 150px;
       img {
-        transition: opacity 500ms ease-in;
+        transition: opacity 300ms ease-in;
+        transition-delay: 300ms;
         width: 90%;
-        position: absolute;
+        position: fixed;
         right: 0;
         filter: grayscale(100%);
         -webkit-filter: grayscale(100%);
@@ -22,7 +28,7 @@
         object-fit: cover;
       }
       a {
-        position: absolute;
+        position: relative;
         z-index: 1;
         font-size: 2rem;
         -webkit-text-stroke-width: 0.65px;
@@ -31,43 +37,15 @@
         text-transform: uppercase;
         transform: translateY(-50%);
       }
-      &.up {
-        a {
-          top: 50%;
-        }
-      }
-      &.down {
-        a {
-          top: 70%;
-        }
-      }
       &.active {
         img {
           opacity: 0.7;
-          transition: opacity 500ms ease-in;
         }
         a {
           font-size: 2.1rem;
           -webkit-text-stroke-width: 0;
           -webkit-text-stroke-color: transparent;
           color: $secondary-color;
-          top: 60%;
-        }
-      }
-      &.last {
-        a {
-          font-size: 1.8rem;
-          -webkit-text-stroke-width: 0.25px;
-        }
-        &.up {
-          a {
-            top: 40%;
-          }
-        }
-        &.down {
-          a {
-            top: 80%;
-          }
         }
       }
     }
@@ -84,16 +62,6 @@
         a {
           font-size: 3rem;
         }
-        &.up {
-          a {
-            top: 40%;
-          }
-        }
-        &.down {
-          a {
-            top: 60%;
-          }
-        }
         &.active {
           a {
             font-size: 3.2rem;
@@ -102,16 +70,6 @@
         &.last {
           a {
             font-size: 2.8rem;
-          }
-          &.up {
-            a {
-              top: 30%;
-            }
-          }
-          &.down {
-            a {
-              top: 70%;
-            }
           }
         }
       }
