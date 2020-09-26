@@ -24,6 +24,8 @@
         -webkit-filter: grayscale(100%);
         opacity: 0;
         top: 20%;
+        left: 60%;
+        transform: translateX(-50%);
         height: 220px;
         object-fit: cover;
       }
@@ -36,6 +38,7 @@
         color: transparent;
         text-transform: uppercase;
         transform: translateY(-50%);
+        transition: 300ms;
       }
       &.active {
         img {
