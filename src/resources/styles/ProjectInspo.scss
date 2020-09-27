@@ -1,0 +1,49 @@
+@import "vars";
+
+.project-inspo {
+  background-color: $secondary-color;
+  display: grid;
+  grid-template:
+    "title insp1" 400px
+    "insp2 insp3" 500px
+    / 50% 50%;
+  column-gap: 45px;
+  row-gap: 45px;
+
+  h2 {
+    grid-area: title;
+    text-transform: uppercase;
+    justify-self: end;
+    align-self: end;
+    color: $primary-color;
+  }
+
+  .react-reveal:nth-child(2) {
+    grid-area: insp1;
+    width: 300px;
+    justify-self: start;
+    align-self: end;
+    img {
+      width: 300px;
+    }
+  }
+
+  .react-reveal:nth-child(3) {
+    grid-area: insp2;
+    width: 300px;
+    justify-self: end;
+    align-self: start;
+    img {
+      width: 300px;
+    }
+  }
+  .react-reveal:nth-child(4) {
+    grid-area: insp3;
+    width: 450px;
+    justify-self: start;
+    align-self: flex-start;
+    img {
+      width: 450px;
+    }
+  }
+}

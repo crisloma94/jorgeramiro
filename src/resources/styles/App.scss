@@ -55,17 +55,8 @@ h3 {
   padding: 0;
 }
 
-ul li.dropdown ul {
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.5s ease;
-}
-
-ul li.dropdown:hover > ul,
-ul li.dropdown:focus-within > ul,
-ul li.dropdown ul:hover {
-  visibility: visible;
-  opacity: 1;
+h2 {
+  font-size: 3.6rem;
 }
 
 .hidden {
@@ -77,10 +68,17 @@ ul li.dropdown ul:hover {
   transition: opacity 1000ms ease-in;
 }
 
-@media screen and (min-width: $breakpoint-mobile) {
+ul li.dropdown ul {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease;
 }
 
-@media screen and (min-width: $breakpoint-tablet) {
+ul li.dropdown:hover > ul,
+ul li.dropdown:focus-within > ul,
+ul li.dropdown ul:hover {
+  visibility: visible;
+  opacity: 1;
 }
 
 @media (min-width: $breakpoint-desktop) {

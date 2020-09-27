@@ -16,7 +16,7 @@ const Project = (props) => {
   return (
     <React.Fragment>
       <ProjectPresentation project={project}></ProjectPresentation>
-      <ProjectInspo></ProjectInspo>
+      <ProjectInspo projectInspo={project.data.inspo}></ProjectInspo>
       <ProjectIdeation></ProjectIdeation>
       <Video></Video>
       <ProjectFinished></ProjectFinished>

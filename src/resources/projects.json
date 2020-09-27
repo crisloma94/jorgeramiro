@@ -14,12 +14,16 @@
             "description": "",
             "images": [
               {
-                "url": "",
-                "description": ""
+                "url": "/images/prisma/insp-abstract.png",
+                "description": "inspiration image abstract"
               },
               {
-                "url": "",
-                "description": ""
+                "url": "/images/prisma/insp-nike.png",
+                "description": "inspiration image nike"
+              },
+              {
+                "url": "/images/prisma/insp-android.png",
+                "description": "inspiration image android"
               }
             ]
           }
@@ -27,30 +31,36 @@
         "sketching": {
           "images": [
             {
-              "url": ""
+              "url": "",
+              "description": ""
             },
             {
-              "url": ""
+              "url": "",
+              "description": ""
             }
           ]
         },
         "prototyping": {
           "images": [
             {
-              "url": ""
+              "url": "",
+              "description": ""
             },
             {
-              "url": ""
+              "url": "",
+              "description": ""
             }
           ]
         },
         "finalProduct": {
           "images": [
             {
-              "url": ""
+              "url": "",
+              "description": ""
             },
             {
-              "url": ""
+              "url": "",
+              "description": ""
             }
           ]
         }
