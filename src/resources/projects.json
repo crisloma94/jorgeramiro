@@ -8,35 +8,35 @@
         "colection": "",
         "sport": "",
         "brand": "",
-        "inspo": [
-          {
-            "title": "Inspo",
-            "description": "",
-            "images": [
-              {
-                "url": "/images/prisma/insp-abstract.png",
-                "description": "inspiration image abstract"
-              },
-              {
-                "url": "/images/prisma/insp-nike.png",
-                "description": "inspiration image nike"
-              },
-              {
-                "url": "/images/prisma/insp-android.png",
-                "description": "inspiration image android"
-              }
-            ]
-          }
-        ],
-        "sketching": {
+        "inspo": {
+          "title": "Inspo",
+          "description": "",
           "images": [
             {
-              "url": "",
-              "description": ""
+              "url": "/images/prisma/insp-abstract.png",
+              "description": "inspiration image abstract"
             },
             {
-              "url": "",
-              "description": ""
+              "url": "/images/prisma/insp-nike.png",
+              "description": "inspiration image nike"
+            },
+            {
+              "url": "/images/prisma/insp-android.png",
+              "description": "inspiration image android"
+            }
+          ]
+        },
+        "sketching": {
+          "title": "Ideation",
+          "description": "",
+          "images": [
+            {
+              "url": "/images/prisma/ideation1.png",
+              "description": "Initial sketchs prisma model"
+            },
+            {
+              "url": "/images/prisma/ideation2.png",
+              "description": "Render prisma model"
             }
           ]
         },
@@ -55,14 +55,18 @@
         "finalProduct": {
           "images": [
             {
-              "url": "",
-              "description": ""
+              "url": "/images/prisma/video.png",
+              "description": "Prisma video frame"
             },
             {
-              "url": "",
-              "description": ""
+              "url": "/images/prisma/prisma-final-pair.jpg",
+              "description": "Prisma pair finished"
             }
-          ]
+          ],
+          "video": {
+            "url": "",
+            "format": "video/mp4"
+          }
         }
       }
     },

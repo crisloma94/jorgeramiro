@@ -2,6 +2,7 @@ import React from "react";
 import { Controller, Scene } from "react-scrollmagic";
 import { Link } from "react-router-dom";
 import "./../resources/styles/ProjectSelector.scss";
+import Image from "./../components/atomic/Image";
 
 const ProjectSelector = (props) => {
   const projects = props.projects;
@@ -22,10 +23,7 @@ const ProjectSelector = (props) => {
                     project.data.name
                   }`}
                 </Link>
-                <img
-                  src={`${process.env.PUBLIC_URL}${project.data.mainImage}`}
-                  alt={project.data.name}
-                />
+                <Image src={project.data.mainImage} alt={project.data.name} />
               </li>
             </Scene>
           ))}

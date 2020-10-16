@@ -1,0 +1,27 @@
+@import "vars";
+
+.next-project {
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: $primary-color;
+  }
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
+  .next-project-overlay {
+    width: 100%;
+    height: 400px;
+    background-color: $accent-color;
+    position: absolute;
+    top: 0;
+    opacity: 0.7;
+  }
+}

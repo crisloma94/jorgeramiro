@@ -4,7 +4,7 @@ import Image from "./../components/atomic/Image";
 import Fade from "react-reveal/Fade";
 
 const ProjectInspo = (props) => {
-  const projectInspo = props.projectInspo[0];
+  const projectInspo = props.projectInspo;
   return (
     <section className="project-inspo">
       <Fade bottom>
@@ -12,8 +12,9 @@ const ProjectInspo = (props) => {
       </Fade>
 
       {projectInspo.images.map((image, index) => (
-        <Fade bottom>
+        <Fade bottom key={"fade" + index}>
           <Image
+            key={"image" + index}
             src={image.url}
             alt={image.description}
             classes={"insp" + (index + 1)}

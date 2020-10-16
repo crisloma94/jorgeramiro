@@ -1,0 +1,25 @@
+@import "vars";
+
+.project-ideation {
+  background-color: $tertiary-color;
+  position: relative;
+  height: 100vh;
+  overflow-y: scroll;
+  h2 {
+    color: transparent;
+    -webkit-text-stroke-width: 0.65px;
+    -webkit-text-stroke-color: $primary-color;
+    position: sticky;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+  }
+  .ideation-images {
+    text-align: center;
+    padding: 80px 40px;
+    img {
+      width: 100%;
+      margin: 20px 0;
+    }
+  }
+}

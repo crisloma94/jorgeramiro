@@ -55,6 +55,15 @@ h3 {
   padding: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+}
+
 h2 {
   font-size: 3.6rem;
 }
@@ -79,6 +88,15 @@ ul li.dropdown:focus-within > ul,
 ul li.dropdown ul:hover {
   visibility: visible;
   opacity: 1;
+}
+
+.disable-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  &::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Chrome/Safari/Webkit */
+  }
 }
 
 @media (min-width: $breakpoint-desktop) {
