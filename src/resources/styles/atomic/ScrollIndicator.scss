@@ -1,0 +1,46 @@
+.scroll-warning {
+  position: absolute;
+  top: 80%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  .scroll-indicator {
+    overflow: hidden;
+    position: absolute;
+    width: 2px;
+    text-align: center;
+    height: 100px;
+    .scroll-border {
+      position: absolute;
+      top: 45px;
+      left: 0;
+      width: 2px;
+      height: 0;
+      background: black;
+      -webkit-animation: load 3s ease-in;
+      -moz-animation: load 3s ease-in;
+      -o-animation: load 3s ease-in;
+      animation: load 3s ease-in;
+      animation-iteration-count: infinite;
+    }
+  }
+}
+
+@keyframes load {
+  35% {
+    height: 100%;
+    transform: translateY(0);
+  }
+  50% {
+    height: 100%;
+    transform: translateY(0);
+  }
+  85% {
+    height: 100%;
+    transform: translateY(100%);
+  }
+  100% {
+    height: 100%;
+    transform: translateY(100%);
+  }
+}

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./../resources/styles/ProjectPresentation.scss";
 import Image from "./../components/atomic/Image";
+import ScrollIndicator from "./atomic/ScrollIndicator";
 
 const ProjectPresentation = (props) => {
   const [textAnimation, setTextAnimation] = useState(false);
@@ -23,7 +24,7 @@ const ProjectPresentation = (props) => {
       ></Image>
       <div
         class={`project-presentation-title ${
-          textAnimation == true ? "" : "start-up"
+          textAnimation === true ? "" : "start-up"
         }`}
       >
         <span>{props.project.data.name}</span>
@@ -34,6 +35,7 @@ const ProjectPresentation = (props) => {
         <span>{props.project.data.name}</span>
         <h1>{props.project.data.name}</h1>
       </div>
+      <ScrollIndicator animationTimer={textAnimation ? 3 : 0}></ScrollIndicator>
     </section>
   );
 };

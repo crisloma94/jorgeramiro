@@ -109,6 +109,12 @@ ul li.dropdown ul:hover {
   }
 }
 
+.animate {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+  animation-fill-mode: forwards;
+}
+
 @media (min-width: $breakpoint-desktop) {
   ul li.dropdown.dropdown-mobile ul,
   ul li.dropdown.dropdown-tablet ul {
