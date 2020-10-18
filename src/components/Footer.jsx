@@ -4,7 +4,7 @@ import "./../resources/styles/Footer.scss";
 const Footer = (props) => {
   return (
     <section className="footer">
-      <div class="container">
+      <div className="container">
         <h3>Say hi</h3>
         <h4>hi@jorgeramiro.com</h4>
       </div>

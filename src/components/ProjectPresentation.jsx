@@ -23,7 +23,7 @@ const ProjectPresentation = (props) => {
         alt={props.project.data.name}
       ></Image>
       <div
-        class={`project-presentation-title ${
+        className={`project-presentation-title ${
           textAnimation === true ? "" : "start-up"
         }`}
       >

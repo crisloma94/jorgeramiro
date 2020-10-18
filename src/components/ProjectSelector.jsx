@@ -13,6 +13,7 @@ const ProjectSelector = (props) => {
         <Controller>
           {projects.map((project, index) => (
             <Scene
+              key={index}
               duration={150}
               classToggle="active"
               triggerElement={`.trigger-${index}`}
