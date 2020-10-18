@@ -22,9 +22,7 @@ const Project = (props) => {
     <React.Fragment>
       <ProjectPresentation project={project}></ProjectPresentation>
       <ProjectInspo projectInspo={project.data.inspo}></ProjectInspo>
-      <ProjectIdeation
-        projectIdeation={project.data.sketching}
-      ></ProjectIdeation>
+      <ProjectIdeation projectIdeation={project.data}></ProjectIdeation>
       <ProjectFinished
         projectFinished={project.data.finalProduct}
       ></ProjectFinished>
