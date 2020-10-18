@@ -1,0 +1,12 @@
+@import "vars";
+
+.footer {
+  h3 {
+    color: transparent;
+    -webkit-text-stroke-width: 0.65px;
+    -webkit-text-stroke-color: $secondary-color;
+  }
+  h4 {
+    color: $secondary-color;
+  }
+}

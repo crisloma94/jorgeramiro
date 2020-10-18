@@ -31,6 +31,7 @@ body {
   margin: 0 auto;
   opacity: 1;
   transition: opacity 750ms ease-in;
+  padding: 40px 80px;
 }
 
 a {
@@ -50,22 +51,27 @@ ul,
 li,
 h1,
 h2,
-h3 {
+h3,
+h4 {
   margin: 0;
   padding: 0;
 }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
   text-transform: uppercase;
 }
 
 h2 {
   font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.5rem;
 }
 
 .hidden {

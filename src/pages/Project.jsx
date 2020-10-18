@@ -5,6 +5,7 @@ import ProjectInspo from "./../components/ProjectInspo";
 import ProjectIdeation from "./../components/ProjectIdeation";
 import ProjectFinished from "./../components/ProjectFinished";
 import NextProject from "./../components/NextProject";
+import Footer from "./../components/Footer";
 
 const Project = (props) => {
   const project = data.Projects.find(
@@ -28,6 +29,7 @@ const Project = (props) => {
         projectFinished={project.data.finalProduct}
       ></ProjectFinished>
       <NextProject nextProject={nextProject}></NextProject>
+      <Footer></Footer>
     </React.Fragment>
   );
 };
