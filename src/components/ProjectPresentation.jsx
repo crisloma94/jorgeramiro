@@ -1,15 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./../resources/styles/ProjectPresentation.scss";
 import Image from "./../components/atomic/Image";
 
 const ProjectPresentation = (props) => {
+  const [textAnimation, setTextAnimation] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTextAnimation(true);
+    }, 500);
+    if (textAnimation) {
+      clearInterval(interval);
+    }
+    return () => clearInterval(interval);
+  }, [textAnimation]);
+
   return (
     <section className="project-presentation">
       <Image
         src={props.project.data.mainImage}
         alt={props.project.data.name}
       ></Image>
-      <h1>{props.project.data.name}</h1>
+      <div
+        class={`project-presentation-title ${
+          textAnimation == true ? "" : "start-up"
+        }`}
+      >
+        <span>{props.project.data.name}</span>
+        <span>{props.project.data.name}</span>
+        <span>{props.project.data.name}</span>
+        <span>{props.project.data.name}</span>
+        <span>{props.project.data.name}</span>
+        <span>{props.project.data.name}</span>
+        <h1>{props.project.data.name}</h1>
+      </div>
     </section>
   );
 };
